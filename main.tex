@@ -56,53 +56,6 @@
 
 \journal{Applied Acoustics}
 
-% Insert the graphical abstract inline, right after the author/affiliation
-% block and before the text abstract, on the same title page (rather than
-% eslarticle's default behaviour of a separate page that re-prints the
-% title/authors). \pprintMaketitle is copied verbatim from elsarticle.cls
-% with one added line: \unvbox\mygrabsbox before the first \hrule.
-\makeatletter
-\newbox\mygrabsbox
-\newenvironment{mygraphicalabstract}{%
-  \global\setbox\mygrabsbox=\vbox\bgroup
-  \hsize=\textwidth\def\baselinestretch{1}%
-  \noindent\unskip{\Large Graphical Abstract}\par\vskip8pt\noindent\ignorespaces}
-  {\egroup}
-
-\def\pprintMaketitle{\clearpage
-  \iflongmktitle\if@twocolumn\let\columnwidth=\textwidth\fi\fi
-  \resetTitleCounters
-  \def\baselinestretch{1}%
-  \printFirstPageNotes
-  \begin{\elsarticletitlealign}%
- \thispagestyle{pprintTitle}%
-   \def\baselinestretch{1}%
-    \Large\@title\par\vskip18pt%
-    \ifx\@elsarticlenewpageafter\newpage@after@title%
-      \newpage
-    \fi%
-    \ifdoubleblind
-      \vspace*{2pc}
-    \else
-      \normalsize\elsauthors\par\vskip10pt
-      \footnotesize\itshape\elsaddress\par\vskip36pt
-    \fi
-    \ifx\@elsarticlenewpageafter\newpage@after@author%
-      \newpage
-    \fi%
-    \ifvoid\mygrabsbox\else\unvbox\mygrabsbox\par\vskip10pt\fi
-    \hrule\vskip12pt
-    \ifvoid\absbox\else\unvbox\absbox\par\vskip10pt\fi
-    \ifvoid\keybox\else\unvbox\keybox\par\vskip10pt\fi
-    \hrule\vskip12pt
-    \ifx\@elsarticlenewpageafter\newpage@after@abstract%
-      \newpage
-    \fi%
-    \end{\elsarticletitlealign}%
-    \gdef\thefootnote{\arabic{footnote}}%
-  }
-\makeatother
-
 \begin{document}
 \linenumbers
 
@@ -122,14 +75,6 @@
             city={Huai'an},
             state={Jiangsu},
             country={China}}
-
-\begin{mygraphicalabstract}
-\includegraphics[
-  width=\textwidth,
-  height=0.32\textheight,
-  keepaspectratio
-]{graphical_abstract.png}
-\end{mygraphicalabstract}
 
 \begin{abstract}
 Acoustic condition monitoring of industrial machinery must contend with severe background noise, class imbalance, and edge hardware shared with concurrent visual workloads. This paper presents a systematic study of a lightweight two-dimensional convolutional neural network (3B-FC128) for supervised acoustic anomaly detection on the MIMII dataset at $-6$\,dB. Across ten seeds, the proposed log-Mel, class-weighted configuration attains mean AUC--ROC of \msFanAuc{} (fan), \msPumpAuc{} (pump), \msSliderAuc{} (slider), and \msValveAuc{} (valve), above the published autoencoder baseline ($\approx 0.64$) and our own autoencoder reproduction. Under one identical protocol it also attains the best mean AUC of three compared supervised architectures, ahead of MobileNetV3 and a heavier STgram-MFN fusion network, and never collapses to chance on any seed, unlike the fusion baseline. The 7.7:1 imbalanced valve category collapses to majority-class prediction under standard training; recovery requires jointly applying log-Mel input and class-weighted loss, since MFCC features remain collapsed even when re-weighted and single-run valve results are seed-unstable, motivating multi-seed evaluation. Ablations over six architecture variants, two spectral representations, three SNR levels, and leave-one-machine-out cross-validation characterize capacity, representation, noise, and generalization effects. Finally, the lighter MFCC variant of the proposed model sustains 488--584 frames per second at two CPU threads with zero VRAM use and at most 6\% degradation under concurrent GPU load; the log-Mel variant is $\sim$2$\times$ costlier per inference but still clears the real-time requirement by orders of magnitude, supporting hardware-decoupled multimodal deployment at the industrial edge for units represented in training data.
