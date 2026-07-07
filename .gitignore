@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Datasets (download separately, see README)
+MIMII_Dataset_*/
+
+# Trained weights (regenerate via code/train_audio.py, see README)
+model_weights/
+
+# Editor/IDE
+.vscode/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db

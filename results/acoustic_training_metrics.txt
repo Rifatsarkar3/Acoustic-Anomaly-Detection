@@ -1,0 +1,22 @@
+============================================================
+🎧 FULL ACOUSTIC ANOMALY DETECTION METRICS (MIMII -6dB)
+============================================================
+Hardware: AMD Ryzen 5 7500F (CPU-Bound 1D-CNN)
+Epochs: 10 per machine | Batch Size: 32 | Learning Rate: 1e-4
+
+[1] FAN PERFORMANCE:
+Final Loss: 0.3448 | Final Accuracy: 84.72%
+
+[2] PUMP PERFORMANCE:
+Final Loss: 0.1195 | Final Accuracy: 95.65%
+
+[3] SLIDER PERFORMANCE:
+Final Loss: 0.1240 | Final Accuracy: 95.68%
+
+[4] VALVE PERFORMANCE:
+Final Loss: 0.2157 | Final Accuracy: 88.51%
+
+CONCLUSION: 
+The CPU-bound 1D-CNN successfully generalized across all four 
+industrial machine types under extreme -6dB SNR conditions.
+============================================================

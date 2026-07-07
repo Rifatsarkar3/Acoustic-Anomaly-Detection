@@ -1,0 +1,14 @@
+============================================================
+📊 FINAL INTERFERENCE METRICS (MIMII -6dB / Ryzen 5 7500F)
+============================================================
+TEST CONFIGURATION: torch.set_num_threads(4)
+
+Isolated Audio Throughput   : 582.42 Frames/Sec
+Concurrent Audio Throughput : 517.69 Frames/Sec
+Performance Degradation     : 11.11%
+
+TRAINING METRICS (Fan):
+Final Epoch [10/10] | Loss: 0.3448 | Accuracy: 84.72%
+
+NOTE: RTX 5070 was at 100% load via ResNet-50 during concurrent test.
+============================================================

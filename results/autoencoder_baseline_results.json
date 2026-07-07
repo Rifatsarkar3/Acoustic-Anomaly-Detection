@@ -1,0 +1,26 @@
+[
+  {
+    "machine": "fan",
+    "auc": 0.5081459082874078,
+    "n_normal": 4075,
+    "n_abnormal": 1475
+  },
+  {
+    "machine": "pump",
+    "auc": 0.6435002550387706,
+    "n_normal": 3749,
+    "n_abnormal": 456
+  },
+  {
+    "machine": "slider",
+    "auc": 0.8457363688647618,
+    "n_normal": 3204,
+    "n_abnormal": 890
+  },
+  {
+    "machine": "valve",
+    "auc": 0.46614571696995855,
+    "n_normal": 3691,
+    "n_abnormal": 479
+  }
+]

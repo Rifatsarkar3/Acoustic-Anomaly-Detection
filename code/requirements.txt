@@ -1,0 +1,22 @@
+# Acoustic Anomaly Detection — Python dependencies
+# Tested with Python 3.14 on Windows (CPU-only torch builds).
+#
+# For CPU-only torch/torchaudio/torchvision wheels, install with:
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+
+# Deep learning (core model + v2_scripts architectures)
+torch==2.12.0
+torchaudio==2.11.0
+torchvision==0.27.0        # required by v2_scripts/models.py (MobileNetV3)
+
+# Scientific stack
+numpy
+scipy
+scikit-learn
+
+# Audio I/O and features
+librosa
+soundfile                  # librosa backend for .wav loading
+
+# Plotting / figures
+matplotlib

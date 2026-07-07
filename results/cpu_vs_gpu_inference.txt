@@ -1,0 +1,26 @@
+CPU vs GPU ACOUSTIC INFERENCE — AcousticAnomalyDetector
+Batch=16, Cycles=500, Warmup=20
+=======================================================
+
+[CPU]
+  fps               : 557.9100716607898
+  lat_mean_ms       : 28.67845700001635
+  lat_p95_ms        : 31.14358999973774
+  lat_p99_ms        : 34.925363000329526
+  vram_bytes        : 0
+  vram_mb           : 0.0
+
+[GPU]
+  fps               : 31654.322141748973
+  lat_mean_ms       : 0.505460199980007
+  lat_p95_ms        : 0.5632350013911489
+  lat_p99_ms        : 0.7969169990974477
+  vram_bytes        : 18888704
+  vram_mb           : 18.013671875
+
+Throughput ratio (CPU/GPU): 0.02x
+VRAM savings vs GPU: 18.01 MB freed by CPU offload
+
+Key finding: CPU acoustic inference at 557.9 FPS with
+0 bytes VRAM — enables concurrent GPU visual stream without
+any memory contention.

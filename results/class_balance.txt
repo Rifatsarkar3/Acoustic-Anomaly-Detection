@@ -1,0 +1,27 @@
+==================================================
+CLASS BALANCE — MIMII -6dB Dataset
+==================================================
+
+FAN:
+  Normal   : 4075 (73.4%)
+  Abnormal : 1475 (26.6%)
+  Total    : 5550
+  Ratio    : 2.8:1 (normal:abnormal)
+
+PUMP:
+  Normal   : 3749 (89.2%)
+  Abnormal : 456 (10.8%)
+  Total    : 4205
+  Ratio    : 8.2:1 (normal:abnormal)
+
+SLIDER:
+  Normal   : 3204 (78.3%)
+  Abnormal : 890 (21.7%)
+  Total    : 4094
+  Ratio    : 3.6:1 (normal:abnormal)
+
+VALVE:
+  Normal   : 3691 (88.5%)
+  Abnormal : 479 (11.5%)
+  Total    : 4170
+  Ratio    : 7.7:1 (normal:abnormal)

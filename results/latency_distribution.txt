@@ -1,0 +1,19 @@
+=================================================================
+LATENCY DISTRIBUTION — AMD Ryzen 5 7500F | 2 threads
+Batch size=16, Cycles=1000, Warmup=50
+=================================================================
+
+[Isolated]
+  Batch latency  — Mean: 27.41 ms  Std: 0.81 ms
+                   P50:  27.19 ms  P95: 28.88 ms  P99: 31.02 ms  Max: 35.28 ms
+  Per-sample     — Mean: 1.713 ms  P95: 1.805 ms  P99: 1.939 ms
+  Throughput     — 583.79 FPS
+  Real-time margin (P99): 5158x (P99=1.94ms vs 10s clip)
+
+[Concurrent]
+  Batch latency  — Mean: 29.16 ms  Std: 1.16 ms
+                   P50:  28.96 ms  P95: 31.11 ms  P99: 33.45 ms  Max: 36.38 ms
+  Per-sample     — Mean: 1.822 ms  P95: 1.944 ms  P99: 2.090 ms
+  Throughput     — 548.73 FPS
+  Real-time margin (P99): 4784x (P99=2.09ms vs 10s clip)
+

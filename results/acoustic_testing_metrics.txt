@@ -1,0 +1,9 @@
+============================================================
+🎧 FINAL UNSEEN TESTING METRICS (MIMII -6dB) - 80/20 SPLIT
+============================================================
+Hardware: AMD Ryzen 5 7500F (CPU-Bound 1D-CNN)
+
+[FAN] Test Loss: 0.3591 | Test Accuracy: 85.86%
+[PUMP] Test Loss: 0.1337 | Test Accuracy: 95.72%
+[SLIDER] Test Loss: 0.1524 | Test Accuracy: 95.12%
+[VALVE] Test Loss: 0.3475 | Test Accuracy: 86.93%

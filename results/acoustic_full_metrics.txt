@@ -1,0 +1,23 @@
+=================================================================
+FULL EVALUATION METRICS — MIMII -6dB | 80/20 Split | Seed=42
+Model: CPU-Bound 2D-CNN | Hardware: AMD Ryzen 5 7500F
+=================================================================
+
+Machine       Acc%    Prec  Recall      F1     AUC     Loss   Test N
+-----------------------------------------------------------------
+fan          85.86  0.7599  0.7333  0.7464  0.9011   0.3591     1110
+pump         95.72  0.8909  0.6203  0.7313  0.9445   0.1337      841
+slider       95.12  0.9839  0.7625  0.8592  0.9730   0.1524      819
+valve        86.93  0.0000  0.0000  0.0000  0.7366   0.3475      834
+
+Class Balance (full dataset per machine):
+  fan        Normal=4075  Abnormal=1475  Ratio=2.8:1
+  pump       Normal=3749  Abnormal=456  Ratio=8.2:1
+  slider     Normal=3204  Abnormal=890  Ratio=3.6:1
+  valve      Normal=3691  Abnormal=479  Ratio=7.7:1
+
+Confusion Matrices (TN/FP/FN/TP):
+  fan         TN=722  FP=73  FN=84  TP=231
+  pump        TN=756  FP=6  FN=30  TP=49
+  slider      TN=657  FP=2  FN=38  TP=122
+  valve       TN=725  FP=0  FN=109  TP=0

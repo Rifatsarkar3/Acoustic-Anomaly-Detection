@@ -1,0 +1,11 @@
+CONV AUTOENCODER BASELINE — MIMII -6dB
+Epochs=20  Batch=32  LR=0.001  Seed=42
+Score: per-sample MSE reconstruction error (higher = more anomalous)
+Reference: Purohit et al. DCASE 2019 AUC ~ 0.640
+
+Machine        AE AUC   vs Purohit   N Normal   N Abnormal
+----------------------------------------------------------
+fan            0.5081      -0.1319       4075         1475
+pump           0.6435      +0.0035       3749          456
+slider         0.8457      +0.2057       3204          890
+valve          0.4661      -0.1739       3691          479

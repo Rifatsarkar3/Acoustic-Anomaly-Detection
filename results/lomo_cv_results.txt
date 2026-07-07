@@ -1,0 +1,29 @@
+LOMO-CV RESULTS — MIMII -6dB
+Epochs=10  Batch=32  LR=0.0001  Seed=42
+Machines: fan, pump, slider  (valve excluded — unstable under random split)
+
+Machine      LOMO AUC      ±SD                 95% CI
+-------------------------------------------------------
+fan            0.5503   0.1520       [0.4029, 0.6975]
+pump           0.6869   0.1881       [0.4978, 0.8459]
+slider         0.7571   0.0885       [0.6701, 0.8441]
+
+Per-fold breakdown:
+
+  FAN
+    held-out=id_00  AUC=0.5933  F1=0.4421  Acc=30.39%  n_train=4132  n_test=1418
+    held-out=id_02  AUC=0.5076  F1=0.3895  Acc=39.35%  n_train=4175  n_test=1375
+    held-out=id_04  AUC=0.7608  F1=0.1266  Acc=76.03%  n_train=4169  n_test=1381
+    held-out=id_06  AUC=0.3395  F1=0.3295  Acc=23.98%  n_train=4174  n_test=1376
+
+  PUMP
+    held-out=id_00  AUC=0.8323  F1=0.5288  Acc=91.47%  n_train=3056  n_test=1149
+    held-out=id_02  AUC=0.6696  F1=0.0857  Acc=88.53%  n_train=3089  n_test=1116
+    held-out=id_04  AUC=0.3864  F1=0.0000  Acc=78.30%  n_train=3403  n_test=802
+    held-out=id_06  AUC=0.8595  F1=0.3252  Acc=66.08%  n_train=3067  n_test=1138
+
+  SLIDER
+    held-out=id_00  AUC=0.8496  F1=0.5866  Acc=83.57%  n_train=2670  n_test=1424
+    held-out=id_02  AUC=0.8386  F1=0.6683  Acc=90.04%  n_train=2759  n_test=1335
+    held-out=id_04  AUC=0.6924  F1=0.4899  Acc=61.10%  n_train=3382  n_test=712
+    held-out=id_06  AUC=0.6478  F1=0.1314  Acc=80.90%  n_train=3471  n_test=623
