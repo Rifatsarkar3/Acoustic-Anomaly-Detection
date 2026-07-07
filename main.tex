@@ -1,6 +1,6 @@
 % Applied Acoustics submission — elsarticle, Elsevier review format
 % (double-spaced single column with line numbers, as required for peer review)
-\documentclass[review]{elsarticle}
+\documentclass[review,nopreprintline]{elsarticle}
 
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
@@ -9,6 +9,33 @@
 \usepackage{xcolor}
 \usepackage{lineno}
 \usepackage{url}
+\usepackage[colorlinks=true]{hyperref}
+
+% \cite{a,b,c} normally prints as one bracketed, comma-separated group
+% ([2,3,4]); Applied Acoustics wants individually bracketed citations
+% ([2], [3], [4]), each independently linked to its bibliography entry.
+% Split the key list and re-issue one \cite per key (hyperref already
+% patches \cite to be a clickable link, so each piece stays linked).
+\makeatletter
+\newif\ifmc@notfirst
+\AtBeginDocument{%
+  \let\@oldcite\cite
+  \def\mc@splitcite#1{%
+    \begingroup
+    \mc@notfirstfalse
+    \@for\@citekey:=#1\do{%
+      \ifmc@notfirst, \fi
+      \mc@notfirsttrue
+      \@oldcite{\@citekey}%
+    }%
+    \endgroup
+  }%
+  % \protect makes \cite safe inside moving arguments (captions, section
+  % titles): during those expansion passes \protect leaves \mc@splitcite
+  % inert instead of running its \begingroup/\@for internals.
+  \def\cite#1{\protect\mc@splitcite{#1}}%
+}
+\makeatother
 
 \graphicspath{{figures/}}
 
