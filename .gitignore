@@ -4,11 +4,8 @@ __pycache__/
 .venv/
 venv/
 
-# Datasets (download separately, see README)
+# Datasets (download separately)
 MIMII_Dataset_*/
-
-# Trained weights (regenerate via code/train_audio.py, see README)
-model_weights/
 
 # Editor/IDE
 .vscode/

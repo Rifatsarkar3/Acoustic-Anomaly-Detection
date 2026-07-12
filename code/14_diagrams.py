@@ -62,8 +62,9 @@ def pipeline_figure():
     arrow(ax, 2.2, 1.1, 2.7, 1.1); arrow(ax, 4.7, 1.1, 5.2, 1.1)
     arrow(ax, 7.4, 1.1, 7.9, 1.1); arrow(ax, 9.7, 1.1, 10.1, 1.1)
 
-    ax.text(6.0, 2.62, "Hardware-decoupled: no shared VRAM, 0.00% acoustic throughput "
-            "degradation under full GPU load", ha="center", fontsize=9.5,
+    ax.text(6.0, 2.62, "Hardware-decoupled: no shared VRAM, ≤ 6% acoustic throughput "
+            "degradation under full GPU load (MFCC variant, 2-thread operating point)",
+            ha="center", fontsize=9.5,
             style="italic", color="#333333")
     plt.tight_layout()
     p = os.path.join(OUT, "fig_pipeline.png")
