@@ -1,7 +1,0 @@
-Highlights (Applied Acoustics requirement: 3-5 bullets, max 85 characters each)
-
-- Lightweight 2D-CNN detects machine faults on MIMII at -6 dB far above AE baselines
-- Valve class-imbalance collapse fixed only by joint log-Mel input and weighted loss
-- Matches a 2x-larger fusion model on AUC yet is the only model that never collapses
-- Ten-seed protocol: bootstrap CIs, pAUC, calibrated thresholds, significance tests
-- CPU-only inference: ~500 FPS on 2 threads, zero VRAM, <=6% loss under full GPU load
