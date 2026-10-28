@@ -1,0 +1,6 @@
+CPU complexity benchmark | threads=2 batch=16 input=(1,64,400) warmup=10 iters=100
+Model                       Params    Lat(ms)        FPS
+--------------------------------------------------------
+MobileNetV3              1,000,705      18.79      851.3
+STgram-MFN (Lite)        6,600,897     123.19      129.9
+Proposed 3B-FC128        3,300,577      61.42      260.5
