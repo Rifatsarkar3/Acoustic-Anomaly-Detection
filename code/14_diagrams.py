@@ -74,8 +74,9 @@ def pipeline_figure():
 
 
 def architecture_figure():
-    fig, ax = plt.subplots(figsize=(13, 3.8))
-    ax.set_xlim(0, 13); ax.set_ylim(0, 3.8); ax.axis("off")
+    # 8 boxes x (1.35 + 0.32) from x=0.3 end at 13.34; width 13.64 keeps a symmetric 0.3 margin
+    fig, ax = plt.subplots(figsize=(13.64, 3.8))
+    ax.set_xlim(0, 13.64); ax.set_ylim(0, 3.8); ax.axis("off")
 
     layers = [
         ("Input\n1 x 64 x 400", "#FFFFFF", "#555555"),
@@ -95,10 +96,10 @@ def architecture_figure():
         if i < len(layers) - 1:
             arrow(ax, x + w, 1.9, x + w + gap, 1.9)
         x += w + gap
-    ax.text(6.5, 0.45, "3B-FC128: three convolutional blocks (16-32-64 channels) + 128-unit classifier. "
+    ax.text(6.82, 0.45, "3B-FC128: three convolutional blocks (16-32-64 channels) + 128-unit classifier. "
             "MFCC input (1 x 40 x 400) yields 2.07 M parameters; Log-Mel input (1 x 64 x 400) yields 3.30 M.",
             ha="center", fontsize=9, style="italic")
-    ax.text(6.5, 3.45, "3B-FC128 architecture", ha="center", fontsize=12,
+    ax.text(6.82, 3.45, "3B-FC128 architecture", ha="center", fontsize=12,
             fontweight="bold")
     plt.tight_layout()
     p = os.path.join(OUT, "fig_architecture.png")
