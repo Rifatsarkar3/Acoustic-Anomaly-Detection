@@ -1,0 +1,72 @@
+[
+ {
+  "method": "Autoencoder baseline [1]",
+  "data": "MIMII, -6 dB",
+  "labels": "normal only",
+  "fan": 0.6625,
+  "pump": 0.66,
+  "slider": 0.7,
+  "valve": 0.5549999999999999,
+  "mean": 0.6443749999999999
+ },
+ {
+  "method": "Image transfer learning, ResNet34 + GMM [14]",
+  "data": "MIMII, -6 dB",
+  "labels": "normal only",
+  "fan": 0.6805000000000001,
+  "pump": 0.74075,
+  "slider": 0.8540000000000001,
+  "valve": 0.6852499999999999,
+  "mean": 0.740125
+ },
+ {
+  "method": "Tiny-AST [8]",
+  "data": "MIMII pump, -6 dB",
+  "labels": "normal + faults",
+  "fan": null,
+  "pump": 0.994595,
+  "slider": null,
+  "valve": null,
+  "mean": null
+ },
+ {
+  "method": "Autoencoder baseline [3]",
+  "data": "DCASE 2020 dev.",
+  "labels": "normal only",
+  "fan": 0.6583500000000001,
+  "pump": 0.7289,
+  "slider": 0.8476249999999999,
+  "valve": 0.6628499999999999,
+  "mean": 0.7244312499999999
+ },
+ {
+  "method": "IDNN [10]",
+  "data": "DCASE 2020 dev.",
+  "labels": "normal only (+ machine-ID labels)",
+  "fan": 0.6770999999999999,
+  "pump": 0.7376,
+  "slider": 0.8645,
+  "valve": 0.8409,
+  "mean": 0.780025
+ },
+ {
+  "method": "Self-supervised MobileNetV2 [6]",
+  "data": "DCASE 2020 dev.",
+  "labels": "normal only (+ machine-ID labels)",
+  "fan": 0.8019,
+  "pump": 0.8253,
+  "slider": 0.9527,
+  "valve": 0.8865000000000001,
+  "mean": 0.8666
+ },
+ {
+  "method": "STgram-MFN (ArcFace) [7]",
+  "data": "DCASE 2020 dev.",
+  "labels": "normal only (+ machine-ID labels)",
+  "fan": 0.9404,
+  "pump": 0.9194,
+  "slider": 0.9954999999999999,
+  "valve": 0.9964,
+  "mean": 0.9629249999999999
+ }
+]

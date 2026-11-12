@@ -1,0 +1,7 @@
+Autoencoder baseline [1]                       MIMII, -6 dB       fan=0.662 pump=0.660 slider=0.700 valve=0.555 mean=0.644
+Image transfer learning, ResNet34 + GMM [14]   MIMII, -6 dB       fan=0.681 pump=0.741 slider=0.854 valve=0.685 mean=0.740
+Tiny-AST [8]                                   MIMII pump, -6 dB  fan=  -   pump=0.995 slider=  -   valve=  -   mean=  -  
+Autoencoder baseline [3]                       DCASE 2020 dev.    fan=0.658 pump=0.729 slider=0.848 valve=0.663 mean=0.724
+IDNN [10]                                      DCASE 2020 dev.    fan=0.677 pump=0.738 slider=0.865 valve=0.841 mean=0.780
+Self-supervised MobileNetV2 [6]                DCASE 2020 dev.    fan=0.802 pump=0.825 slider=0.953 valve=0.887 mean=0.867
+STgram-MFN (ArcFace) [7]                       DCASE 2020 dev.    fan=0.940 pump=0.919 slider=0.995 valve=0.996 mean=0.963
