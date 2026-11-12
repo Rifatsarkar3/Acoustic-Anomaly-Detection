@@ -158,7 +158,7 @@ def fig_deployment():
     """Thread sweep (throughput and degradation under GPU load) and latency histograms from script 18."""
     d = load("deployment_benchmark.json"); R, raw = d["results"], d["raw_latencies_ms"]
     tp = lambda v, t, cond: np.array([R[f"A|{v}|t{t}|rep{r}"][cond]["clips_per_s"] for r in range(3)])
-    fig, axes = plt.subplots(1, 2, figsize=(W, 2.1), gridspec_kw=dict(left=0.1, right=0.99, bottom=0.2, top=0.95, wspace=0.35))
+    fig, axes = plt.subplots(1, 2, figsize=(W, 2.5), gridspec_kw=dict(left=0.1, right=0.99, bottom=0.36, top=0.96, wspace=0.35))
     for v, c in (("logmel", "#1A56A8"), ("mfcc", "#999999")):
         iso = np.array([tp(v, t, "isolated") for t in THREADS]); con = np.array([tp(v, t, "concurrent") for t in THREADS])
         axes[0].plot(THREADS, iso.mean(1), "o-", color=c, ms=3, lw=1.1, label=f"{VAR[v]}, GPU idle")
@@ -167,7 +167,9 @@ def fig_deployment():
         axes[1].errorbar(THREADS, m, yerr=[m - deg.min(1), deg.max(1) - m], fmt="o-", color=c, ms=3, lw=1.1, capsize=2,
                          label=VAR[v])
     for ax in axes:
-        ax.set_xlabel("CPU threads"); ax.set_xticks(THREADS); ax.legend(frameon=False, loc="upper left")
+        ax.set_xlabel("CPU threads"); ax.set_xticks(THREADS)
+    # one legend below both panels: in-panel legends covered data points (colours also identify the right panel)
+    fig.legend(*axes[0].get_legend_handles_labels(), loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.54, 0.0))
     axes[0].set_ylabel("Throughput (clips/s)"); axes[1].set_ylabel("Degradation (%)")
     save(fig, "fig_thread_sweep.png")
     fig, axes = plt.subplots(1, 2, figsize=(W, 1.9), gridspec_kw=dict(left=0.1, right=0.98, bottom=0.23, top=0.88, wspace=0.3))
